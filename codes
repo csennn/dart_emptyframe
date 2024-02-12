@@ -1,0 +1,33 @@
+// creating empty app frame
+
+import "package:flutter/material.dart"; //  Google’s open-source design system: material.io
+
+void main(){
+
+  runApp(const MyApp());
+
+}
+
+class MyApp extends StatelessWidget { // stl+enter
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      title: "empty frame",
+      home: MainFrame(), // We used the home parameter to call another widget
+    );
+  }
+}
+
+class MainFrame extends StatelessWidget {
+  const MainFrame({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text("Empty Frame"), backgroundColor: Colors.blue,),
+      body: const Text("this is an empty frame"), // To call the widget in the scaffold, we called body
+    );
+  }
+}
